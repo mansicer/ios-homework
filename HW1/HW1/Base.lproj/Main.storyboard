@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DB-Db-Mlo">
-                                <rect key="frame" x="185" y="424" width="44" height="48"/>
+                                <rect key="frame" x="185" y="429" width="44" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="ON">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
@@ -30,8 +30,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="2DB-Db-Mlo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Fk-zJ-sK3"/>
-                            <constraint firstItem="2DB-Db-Mlo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ASL-Xq-jz7"/>
+                            <constraint firstItem="2DB-Db-Mlo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="au6-e0-cMf"/>
+                            <constraint firstItem="2DB-Db-Mlo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wrM-q6-jm2"/>
                         </constraints>
                     </view>
                     <connections>
