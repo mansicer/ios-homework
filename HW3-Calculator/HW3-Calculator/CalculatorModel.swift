@@ -17,29 +17,58 @@ class CalculatorModel {
     var lastOperator = 0.0
     var lastOperation = Operation.NONE
     
-    func addNumber(num: Int) {
+    func isInteger(num: Double) -> Bool {
+        return Double(Int(num)) == num
+    }
+    func isInteger(str: String) -> Bool {
+        return Int(str) != nil
+    }
+    func checkFinished() {
         if finished {
-            text = "0"
+            modifyText(str: "0")
             finished = false
         }
-        text += String(num)
-        
-        if Int(text) != nil {
-            text = "\(Int(text)!)"
+    }
+    func modifyText(str: String) {
+        if isInteger(str: str) {
+            text = "\(Int(str)!)"
         }
         else {
-            text = "\(Double(text)!)"
+            text = str
         }
+    }
+    func modifyText(num: Double) {
+        if isInteger(num: num) {
+            text = "\(Int(num))"
+        }
+        else {
+            text = "\(num)"
+        }
+    }
+    
+    func addNumber(num: Int) {
+        checkFinished()
+        modifyText(str: text + String(num))
     }
     func addDot() {
-        if finished {
-            text = "0"
-        }
+        checkFinished()
         text += "."
     }
+    func addPercent() {
+        checkFinished()
+        let num = Double(text)!
+        modifyText(num: num / 100)
+    }
+    func addNeg() {
+        checkFinished()
+        let num = Double(text)!
+        modifyText(num: -num)
+    }
+    
     func addOperation(op: Operation) {
-        lastOperator = Double(text) ?? 0
+        lastOperator = Double(text)!
         lastOperation = op
+        finished = true
     }
     func calculate() {
         var result = 0.0
@@ -55,7 +84,17 @@ class CalculatorModel {
         case .NONE:
             result = Double(text) ?? 0
         }
-        text = "\(result)"
+        modifyText(num: result)
         finished = true
+    }
+    func pressAC() {
+        if finished {
+            lastOperation = .NONE
+            modifyText(str: "0")
+        }
+        else {
+            modifyText(str: "0")
+            finished = true
+        }
     }
 }

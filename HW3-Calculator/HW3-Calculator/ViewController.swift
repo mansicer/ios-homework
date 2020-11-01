@@ -15,9 +15,51 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var acBtn: RoundedButton!
     
     func flushDisplay() {
         label.text = model.text
+        if model.finished {
+            print("T")
+            acBtn.setTitle("AC", for: .normal)
+        }
+        else {
+            print("F")
+            acBtn.setTitle("C", for: .normal)
+        }
+    }
+    @IBAction func touchAC(_ sender: Any) {
+        model.pressAC()
+        flushDisplay()
+    }
+    @IBAction func touchPercent(_ sender: Any) {
+        model.addPercent()
+        flushDisplay()
+    }
+    @IBAction func touchNeg(_ sender: Any) {
+        model.addNeg()
+        flushDisplay()
+    }
+    
+    @IBAction func touchPlus(_ sender: Any) {
+        model.addOperation(op: .PLUS)
+        flushDisplay()
+    }
+    @IBAction func touchMinus(_ sender: Any) {
+        model.addOperation(op: .MINUS)
+        flushDisplay()
+    }
+    @IBAction func touchStar(_ sender: Any) {
+        model.addOperation(op: .STAR)
+        flushDisplay()
+    }
+    @IBAction func touchDiv(_ sender: Any) {
+        model.addOperation(op: .DIV)
+        flushDisplay()
+    }
+    @IBAction func touchEqual(_ sender: Any) {
+        model.calculate()
+        flushDisplay()
     }
     
     @IBAction func touchNum0(_ sender: Any) {
@@ -33,8 +75,8 @@ class ViewController: UIViewController {
         flushDisplay()
     }
     @IBAction func touchNum3(_ sender: Any) {
-            model.addNumber(num: 3)
-            flushDisplay()
+        model.addNumber(num: 3)
+        flushDisplay()
     }
     @IBAction func tourchNum4(_ sender: Any) {
         model.addNumber(num: 4)
