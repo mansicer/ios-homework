@@ -20,14 +20,55 @@ class ViewController: UIViewController {
     func flushDisplay() {
         label.text = model.text
         if model.finished {
-            print("T")
             acBtn.setTitle("AC", for: .normal)
         }
         else {
-            print("F")
             acBtn.setTitle("C", for: .normal)
         }
     }
+    
+    @IBAction func touchXSquare(_ sender: Any) {
+        model.square()
+        flushDisplay()
+    }
+    @IBAction func touchXCube(_ sender: Any) {
+        model.cube()
+        flushDisplay()
+    }
+    @IBAction func touchSquareRoot(_ sender: Any) {
+        model.squareRoot()
+        flushDisplay()
+    }
+    @IBAction func touchCubeRoot(_ sender: Any) {
+        model.cubeRoot()
+        flushDisplay()
+    }
+    @IBAction func touchFactorial(_ sender: Any) {
+        model.factorial()
+        flushDisplay()
+    }
+    @IBAction func touchLog(_ sender: Any) {
+        model.calLog()
+        flushDisplay()
+    }
+    @IBAction func touchSin(_ sender: Any) {
+        model.calSin()
+        flushDisplay()
+    }
+    @IBAction func touchCos(_ sender: Any) {
+        model.calCos()
+        flushDisplay()
+    }
+    @IBAction func touchTan(_ sender: Any) {
+        model.calTan()
+        flushDisplay()
+    }
+    @IBAction func touchPi(_ sender: Any) {
+        model.pressPi()
+        flushDisplay()
+    }
+    
+    
     @IBAction func touchAC(_ sender: Any) {
         model.pressAC()
         flushDisplay()

@@ -14,7 +14,7 @@ enum Operation {
 class CalculatorModel {
     var text = "0"
     var finished = true
-    var lastOperator = 0.0
+    var lastOperator: Double? = 0.0
     var lastOperation = Operation.NONE
     
     func isInteger(num: Double) -> Bool {
@@ -23,10 +23,22 @@ class CalculatorModel {
     func isInteger(str: String) -> Bool {
         return Int(str) != nil
     }
+    func checkCurrentText() -> Double? {
+        if Double(text) == nil {
+            return nil
+        }
+        else {
+            return Double(text)
+        }
+    }
+    
     func checkFinished() {
         if finished {
-            modifyText(str: "0")
+            modifyText(num: 0)
             finished = false
+        }
+        if text == "Error" {
+            modifyText(num: 0)
         }
     }
     func modifyText(str: String) {
@@ -46,6 +58,7 @@ class CalculatorModel {
         }
     }
     
+    
     func addNumber(num: Int) {
         checkFinished()
         modifyText(str: text + String(num))
@@ -54,39 +67,14 @@ class CalculatorModel {
         checkFinished()
         text += "."
     }
-    func addPercent() {
-        checkFinished()
-        let num = Double(text)!
-        modifyText(num: num / 100)
-    }
-    func addNeg() {
-        checkFinished()
-        let num = Double(text)!
-        modifyText(num: -num)
-    }
     
     func addOperation(op: Operation) {
-        lastOperator = Double(text)!
+        lastOperator = Double(text)
         lastOperation = op
         finished = true
     }
-    func calculate() {
-        var result = 0.0
-        switch lastOperation {
-        case .PLUS:
-            result = lastOperator + (Double(text) ?? 0)
-        case .MINUS:
-            result = lastOperator - (Double(text) ?? 0)
-        case .STAR:
-            result = lastOperator * (Double(text) ?? 0)
-        case .DIV:
-            result = lastOperator / (Double(text) ?? 0)
-        case .NONE:
-            result = Double(text) ?? 0
-        }
-        modifyText(num: result)
-        finished = true
-    }
+    
+    
     func pressAC() {
         if finished {
             lastOperation = .NONE
@@ -95,6 +83,157 @@ class CalculatorModel {
         else {
             modifyText(str: "0")
             finished = true
+        }
+    }
+    func pressPi() {
+        modifyText(num: Double.pi)
+    }
+    
+    // function of calculation
+    func calculate() {
+        if lastOperator == nil {
+            text = "Error"
+            finished = true
+            return
+        }
+        let right = checkCurrentText()
+        if right == nil {
+            finished = true
+            return
+        }
+        var result = 0.0
+        switch lastOperation {
+        case .PLUS:
+            result = lastOperator! + right!
+        case .MINUS:
+            result = lastOperator! - right!
+        case .STAR:
+            result = lastOperator! * right!
+        case .DIV:
+            if right == 0 {
+                text = "Error"
+                finished = true
+                return
+            }
+            result = lastOperator! / right!
+        case .NONE:
+            result = right!
+        }
+        modifyText(num: result)
+        finished = true
+    }
+    func addPercent() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: val! / 100)
+        }
+    }
+    func addNeg() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: -val!)
+        }
+    }
+    func square() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: pow(val!, 2))
+        }
+    }
+    func cube() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: pow(val!, 3))
+        }
+    }
+    func squareRoot() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: sqrt(val!))
+        }
+    }
+    func cubeRoot() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: pow(val!, 1.0/3))
+        }
+    }
+    func factorial() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            if val! == Double(Int(val!)) {
+                let currentNum = Int(val!)
+                var fact = currentNum;
+                for i in 1..<currentNum {
+                    fact *= i
+                }
+                modifyText(num: Double(fact))
+            }
+            else {
+                text = "Error"
+            }
+        }
+    }
+    func calLog() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            if val! > 0 {
+                modifyText(num: log(val!))
+            }
+            else {
+                text = "Error"
+            }
+        }
+    }
+    func calSin() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: sin(val!))
+        }
+    }
+    func calCos() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: cos(val!))
+        }
+    }
+    func calTan() {
+        let val = checkCurrentText()
+        if val == nil {
+            text = "Error"
+        }
+        else {
+            modifyText(num: -tan(val!))
         }
     }
 }

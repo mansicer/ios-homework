@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,23 +13,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW3_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-qu-KUm">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <rect key="frame" x="44" y="0.0" width="724" height="354"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkh-Hb-wF7">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="52.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="45.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-sW-pcr">
-                                        <rect key="frame" x="0.0" y="68.333333333333329" width="808" height="52"/>
+                                        <rect key="frame" x="0.0" y="61.666666666666671" width="724" height="45.666666666666671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPV-ln-pov" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="x²">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,11 +47,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYl-Cs-3iZ"/>
+                                                    <action selector="touchXSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhg-uM-ux4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kT-6P-ZL6" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="136.33333333333334" y="0.0" width="127.00000000000003" height="52"/>
+                                                <rect key="frame" x="122.33333333333334" y="0.0" width="113" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="x³">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,11 +69,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4w-ad-YbS"/>
+                                                    <action selector="touchXCube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugM-Ft-FYH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1f-v8-BCz" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="272.33333333333331" y="0.0" width="127.33333333333331" height="52"/>
+                                                <rect key="frame" x="244.33333333333334" y="0.0" width="113.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,7 +94,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-xL-Pqp" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="408.66666666666669" y="0.0" width="127.00000000000006" height="52"/>
+                                                <rect key="frame" x="366.66666666666669" y="0.0" width="113" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="+/-">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,7 +115,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xD-yK-UnL" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="544.66666666666663" y="0.0" width="127.33333333333337" height="52"/>
+                                                <rect key="frame" x="488.66666666666657" y="0.0" width="113.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="%">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,7 +136,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-bE-dZH" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="681" y="0.0" width="127" height="52"/>
+                                                <rect key="frame" x="611" y="0.0" width="113" height="45.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="÷">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,10 +159,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-u6-fXj">
-                                        <rect key="frame" x="0.0" y="136.33333333333334" width="808" height="52.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="123.33333333333333" width="724" height="45.666666666666671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-pv-T7h" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="52.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="√x">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,11 +180,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ex2-4E-HfA"/>
+                                                    <action selector="touchSquareRoot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LT8-nN-Sjs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-Rc-eWX" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="136.33333333333334" y="0.0" width="126.33333333333334" height="52.333333333333336"/>
+                                                <rect key="frame" x="122.33333333333334" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="³√x">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,11 +202,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NV2-8u-ztI"/>
+                                                    <action selector="touchCubeRoot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GcY-c0-Str"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-Ic-Jad" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="272.66666666666669" y="0.0" width="126.33333333333331" height="52.333333333333336"/>
+                                                <rect key="frame" x="244.66666666666671" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,7 +227,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk8-9C-CiQ" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="409" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="367" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,7 +248,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK9-ey-BSg" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="545.33333333333337" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="489.33333333333331" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,7 +269,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-1h-c08" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="681.66666666666663" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="611.66666666666663" y="0.0" width="112.33333333333337" height="45.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="×">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,10 +292,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-YJ-o0r">
-                                        <rect key="frame" x="0.0" y="204.66666666666666" width="808" height="51.999999999999972"/>
+                                        <rect key="frame" x="0.0" y="185" width="724" height="45.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvh-Iq-shf" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="x!">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -313,11 +313,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="tourchNum4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tvy-cJ-uXj"/>
+                                                    <action selector="touchFactorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DK-hz-UBv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIp-YG-g7H" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="136.33333333333334" y="0.0" width="126.33333333333334" height="52"/>
+                                                <rect key="frame" x="122.33333333333334" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="ln">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,11 +335,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="tourchNum4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAY-BX-3sq"/>
+                                                    <action selector="touchLog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sXR-dZ-Xpy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suz-Pg-49Q" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="272.66666666666669" y="0.0" width="126.33333333333331" height="52"/>
+                                                <rect key="frame" x="244.66666666666671" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -360,7 +360,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-et-qBD" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="409" y="0.0" width="126.33333333333337" height="52"/>
+                                                <rect key="frame" x="367" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -381,7 +381,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-Pa-evC" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="545.33333333333337" y="0.0" width="126.33333333333337" height="52"/>
+                                                <rect key="frame" x="489.33333333333331" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -402,7 +402,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-yO-HLL" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="681.66666666666663" y="0.0" width="126.33333333333337" height="52"/>
+                                                <rect key="frame" x="611.66666666666663" y="0.0" width="112.33333333333337" height="45.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,10 +425,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nXs-6m-aqj">
-                                        <rect key="frame" x="0.0" y="272.66666666666669" width="808" height="52.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="246.66666666666666" width="724" height="45.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZ2-LV-ncf" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="52.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="sin">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -446,11 +446,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9LO-gy-pg5"/>
+                                                    <action selector="touchSin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fv4-XF-Td2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79r-bl-JNw" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="136.33333333333334" y="0.0" width="126.33333333333334" height="52.333333333333336"/>
+                                                <rect key="frame" x="122.33333333333334" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="cos">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -468,11 +468,11 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                                 <connections>
-                                                    <action selector="touchNum1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fwy-5F-cIc"/>
+                                                    <action selector="touchCos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wk1-7B-20S"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-jV-iI1" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="272.66666666666669" y="0.0" width="126.33333333333331" height="52.333333333333336"/>
+                                                <rect key="frame" x="244.66666666666671" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -493,7 +493,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2V-Qx-wtX" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="409" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="367" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -514,7 +514,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtc-Gs-me8" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="545.33333333333337" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="489.33333333333331" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -535,7 +535,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-wA-w0v" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="681.66666666666663" y="0.0" width="126.33333333333337" height="52.333333333333336"/>
+                                                <rect key="frame" x="611.66666666666663" y="0.0" width="112.33333333333337" height="45.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -558,13 +558,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jxu-yN-7py">
-                                        <rect key="frame" x="0.0" y="341" width="808" height="52"/>
+                                        <rect key="frame" x="0.0" y="308.33333333333331" width="724" height="45.666666666666686"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fHn-L0-k5H">
-                                                <rect key="frame" x="0.0" y="0.0" width="262.66666666666669" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="45.666666666666664"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-Xy-3Sc" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="52"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="45.666666666666664"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="tan">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -581,11 +581,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOe-Ic-C9E"/>
+                                                            <action selector="touchTan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTV-l0-3X5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsV-5R-xiT" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="136.33333333333334" y="0.0" width="126.33333333333334" height="52"/>
+                                                        <rect key="frame" x="122.33333333333334" y="0.0" width="112.33333333333334" height="45.666666666666664"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="π">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -602,14 +602,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="touchNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UrR-Qi-y0m"/>
+                                                            <action selector="touchPi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jL4-8E-XI5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-eK-CFH" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="272.66666666666663" y="0.0" width="262.66666666666663" height="52"/>
+                                                <rect key="frame" x="244.66666666666669" y="0.0" width="234.66666666666669" height="45.666666666666664"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -630,10 +630,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="idb-bH-fwU">
-                                                <rect key="frame" x="545.33333333333337" y="0.0" width="262.66666666666663" height="52"/>
+                                                <rect key="frame" x="489.33333333333343" y="0.0" width="234.66666666666669" height="45.666666666666664"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-XH-Xnj" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="52"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="45.666666666666664"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -654,7 +654,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-kX-ch7" customClass="RoundedButton" customModule="HW3_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="136.33333333333326" y="0.0" width="126.33333333333331" height="52"/>
+                                                        <rect key="frame" x="122.33333333333326" y="0.0" width="112.33333333333331" height="45.666666666666664"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
