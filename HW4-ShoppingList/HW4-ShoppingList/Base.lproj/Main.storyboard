@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lxq-dC-amd">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping Item View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ShoppingItemViewController" customModule="HW4_ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8an-Ij-Jec">
+                                <rect key="frame" x="16" y="104" width="343" height="423"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入商品名称..." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BWV-WD-Jww">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="T8t-t2-WXy">
+                                        <rect key="frame" x="0.0" y="42" width="343" height="343"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="T8t-t2-WXy" secondAttribute="height" multiplier="1:1" id="RKJ-7k-0q5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="srM-JV-Log" appends="YES" id="ICk-IG-YiN"/>
+                                        </connections>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0gF-N2-jm9" customClass="RatingPickerView" customModule="HW4_ShoppingList" customModuleProvider="target">
+                                        <rect key="frame" x="80.666666666666686" y="393" width="182" height="30"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BWV-WD-Jww" firstAttribute="leading" secondItem="8an-Ij-Jec" secondAttribute="leading" id="09t-rQ-lcL"/>
+                                    <constraint firstAttribute="trailing" secondItem="BWV-WD-Jww" secondAttribute="trailing" id="ZIV-zl-tNQ"/>
+                                    <constraint firstItem="T8t-t2-WXy" firstAttribute="leading" secondItem="8an-Ij-Jec" secondAttribute="leading" id="dSB-JD-9gR"/>
+                                    <constraint firstItem="T8t-t2-WXy" firstAttribute="centerX" secondItem="8an-Ij-Jec" secondAttribute="centerX" id="pTY-rQ-eTL"/>
+                                    <constraint firstAttribute="trailing" secondItem="T8t-t2-WXy" secondAttribute="trailing" id="pXv-rN-7qt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NMk-pl-NZj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NMk-pl-NZj" firstAttribute="trailing" secondItem="8an-Ij-Jec" secondAttribute="trailing" constant="16" id="6WI-ru-LIV"/>
+                            <constraint firstItem="8an-Ij-Jec" firstAttribute="top" secondItem="NMk-pl-NZj" secondAttribute="top" constant="16" id="acN-ou-GMS"/>
+                            <constraint firstItem="8an-Ij-Jec" firstAttribute="centerX" secondItem="NMk-pl-NZj" secondAttribute="centerX" id="evI-VF-gn5"/>
+                            <constraint firstItem="8an-Ij-Jec" firstAttribute="leading" secondItem="NMk-pl-NZj" secondAttribute="leading" constant="16" id="oOK-7g-EIc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8aB-sU-ApR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Z5-dv-q0V">
+                            <connections>
+                                <segue destination="vWa-45-fKK" kind="unwind" unwindAction="unwindToShoppingListWithSender:" id="bsJ-ky-Fyt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="BWV-WD-Jww" id="KWm-yH-UCR"/>
+                        <outlet property="photoImageView" destination="T8t-t2-WXy" id="rMc-8N-v2f"/>
+                        <outlet property="ratingPickerView" destination="0gF-N2-jm9" id="rUT-Nc-9pa"/>
+                        <outlet property="saveButton" destination="2Z5-dv-q0V" id="S62-st-my1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="vWa-45-fKK" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="srM-JV-Log">
+                    <connections>
+                        <action selector="selectFromPhotoLibrary:" destination="BYZ-38-t0r" id="zxh-es-MfR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1067.6923076923076" y="125.82938388625591"/>
+        </scene>
+        <!--你的购物清单-->
+        <scene sceneID="Hqw-f5-eY4">
+            <objects>
+                <tableViewController id="Cc5-QE-ybx" customClass="ShoppingItemTableViewController" customModule="HW4_ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="usr-fk-vSt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shopping Item Row" rowHeight="100" id="cb8-dN-HHG" customClass="ShoppingItemTableViewCell" customModule="HW4_ShoppingList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cb8-dN-HHG" id="3hA-4R-csI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-vU-mmf">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="0vN-Ar-kJK"/>
+                                                <constraint firstAttribute="width" secondItem="vDS-vU-mmf" secondAttribute="height" multiplier="1:1" id="E1s-XJ-8lK"/>
+                                                <constraint firstAttribute="height" constant="100" id="YN9-mj-wSo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vr-hI-zBG" customClass="RatingPickerView" customModule="HW4_ShoppingList" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="60" width="182" height="30"/>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="很多很多字很多很多字很多很多字很多很多字" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99E-Wf-j0T">
+                                            <rect key="frame" x="108" y="10" width="252" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vDS-vU-mmf" firstAttribute="top" secondItem="3hA-4R-csI" secondAttribute="top" id="7WA-yp-DYg"/>
+                                        <constraint firstAttribute="trailing" secondItem="99E-Wf-j0T" secondAttribute="trailing" constant="15" id="9fj-i8-Ke9"/>
+                                        <constraint firstAttribute="bottom" secondItem="6vr-hI-zBG" secondAttribute="bottom" constant="10" id="Eea-8U-ChZ"/>
+                                        <constraint firstItem="99E-Wf-j0T" firstAttribute="top" secondItem="3hA-4R-csI" secondAttribute="top" constant="10" id="QSb-0P-bpl"/>
+                                        <constraint firstItem="vDS-vU-mmf" firstAttribute="leading" secondItem="3hA-4R-csI" secondAttribute="leading" id="RfR-zR-y0R"/>
+                                        <constraint firstItem="6vr-hI-zBG" firstAttribute="leading" secondItem="99E-Wf-j0T" secondAttribute="leading" id="dVd-Nl-4Le"/>
+                                        <constraint firstItem="99E-Wf-j0T" firstAttribute="leading" secondItem="vDS-vU-mmf" secondAttribute="trailing" constant="8" symbolic="YES" id="kfA-jf-4co"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="99E-Wf-j0T" id="Xmk-zI-Zpk"/>
+                                    <outlet property="photoImageView" destination="vDS-vU-mmf" id="wTV-dg-T4w"/>
+                                    <outlet property="ratingPickerView" destination="6vr-hI-zBG" id="wmm-Yw-fZZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Edit Shopping Item" id="Bh1-Io-tHh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cc5-QE-ybx" id="eBz-uQ-lpi"/>
+                            <outlet property="delegate" destination="Cc5-QE-ybx" id="Hwm-kM-uZO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="你的购物清单" id="9MK-Mr-Mgt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GUM-gi-i6F">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="Add Shopping Item" id="Qxa-Z6-OQ3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eff-eS-PMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="125.82938388625591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IFa-xQ-piP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lxq-dC-amd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NcV-2C-A2X">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cc5-QE-ybx" kind="relationship" relationship="rootViewController" id="Zdz-r0-cz3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qdw-Mn-28R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689.23076923076917" y="125.82938388625591"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bh1-Io-tHh"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="DefaultPhoto" width="320" height="320"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
