@@ -23,7 +23,6 @@ import os.log
         } else {
             loadSamples()
         }
-        saveShoppingList()
     }
     
     // MARK: properties
@@ -34,9 +33,9 @@ import os.log
         let photo1 = UIImage(named: "SampleItem1")
         let photo2 = UIImage(named: "SampleItem2")
         let photo3 = UIImage(named: "SampleItem3")
-        let item1 = ShoppingItem(name: "iPhone 12 蓝色", photo: photo1, rating: 3)
-        let item2 = ShoppingItem(name: "iPhone 12 Pro 石墨色", photo: photo2, rating: 4)
-        let item3 = ShoppingItem(name: "iPhone 电源适配器 20W", photo: photo3, rating: 1)
+        let item1 = ShoppingItem(name: "iPhone 12 蓝色", photo: photo1, rating: 3, reason: "这蓝色真好看! (并不)")
+        let item2 = ShoppingItem(name: "iPhone 12 Pro 石墨色", photo: photo2, rating: 4, reason: "手感沉, 质感好")
+        let item3 = ShoppingItem(name: "iPhone 电源适配器 20W", photo: photo3, rating: 1, reason: "宇宙最强超级快充")
         shoppingItems += [item1, item2, item3]
     }
     
@@ -93,7 +92,11 @@ import os.log
         if editingStyle == .delete {
             // Delete the row from the data source
             shoppingItems.remove(at: indexPath.row)
-            saveShoppingList()
+            
+            DispatchQueue.main.async {
+                self.saveShoppingList()
+            }
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -128,7 +131,9 @@ import os.log
                 shoppingItems.append(item)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
-            saveShoppingList()
+            DispatchQueue.main.async {
+                self.saveShoppingList()
+            }
         }
     }
     

@@ -12,6 +12,7 @@
 		081A43C125598D7700371AFE /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A43C025598D7700371AFE /* ShoppingItem.swift */; };
 		081A43C62559939E00371AFE /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A43C52559939E00371AFE /* ShoppingItemTableViewCell.swift */; };
 		081A43CB2559990C00371AFE /* ShoppingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A43CA2559990C00371AFE /* ShoppingItemTableViewController.swift */; };
+		08DD150F255BCFB200A64051 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 08DD150E255BCFB200A64051 /* MobileNetV2.mlmodel */; };
 		08DEFF1C25516AEC003B4708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DEFF1B25516AEC003B4708 /* AppDelegate.swift */; };
 		08DEFF1E25516AEC003B4708 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DEFF1D25516AEC003B4708 /* SceneDelegate.swift */; };
 		08DEFF2025516AEC003B4708 /* ShoppingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DEFF1F25516AEC003B4708 /* ShoppingItemViewController.swift */; };
@@ -45,6 +46,7 @@
 		081A43C025598D7700371AFE /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		081A43C52559939E00371AFE /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		081A43CA2559990C00371AFE /* ShoppingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewController.swift; sourceTree = "<group>"; };
+		08DD150E255BCFB200A64051 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		08DEFF1825516AEC003B4708 /* HW4-ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW4-ShoppingList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DEFF1B25516AEC003B4708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DEFF1D25516AEC003B4708 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				08DEFF1F25516AEC003B4708 /* ShoppingItemViewController.swift */,
 				08DEFF2125516AEC003B4708 /* Main.storyboard */,
 				081A43CA2559990C00371AFE /* ShoppingItemTableViewController.swift */,
+				08DD150E255BCFB200A64051 /* MobileNetV2.mlmodel */,
 				081A43C52559939E00371AFE /* ShoppingItemTableViewCell.swift */,
 				081A43C025598D7700371AFE /* ShoppingItem.swift */,
 				081A43BB2559729500371AFE /* RatingPickerView.swift */,
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DD150F255BCFB200A64051 /* MobileNetV2.mlmodel in Sources */,
 				08DEFF2025516AEC003B4708 /* ShoppingItemViewController.swift in Sources */,
 				08DEFF1C25516AEC003B4708 /* AppDelegate.swift in Sources */,
 				08173A362559D622006637F7 /* LaunchScreenViewController.swift in Sources */,

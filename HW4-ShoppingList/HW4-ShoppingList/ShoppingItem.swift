@@ -13,6 +13,7 @@ class ShoppingItem: NSObject, NSCoding {
         coder.encode(name, forKey: PropertyKey.name)
         coder.encode(photo, forKey: PropertyKey.photo)
         coder.encode(rating, forKey: PropertyKey.rating)
+        coder.encode(reason, forKey: PropertyKey.reason)
     }
     
     required convenience init?(coder: NSCoder) {
@@ -22,7 +23,8 @@ class ShoppingItem: NSObject, NSCoding {
         }
         let photo = coder.decodeObject(forKey: PropertyKey.photo) as? UIImage
         let rating = coder.decodeInteger(forKey: PropertyKey.rating)
-        self.init(name: name, photo: photo, rating: rating)
+        let reason = coder.decodeObject(forKey: PropertyKey.reason) as? String
+        self.init(name: name, photo: photo, rating: rating, reason: reason)
     }
     
     // MARK: archiving paths
@@ -33,18 +35,21 @@ class ShoppingItem: NSObject, NSCoding {
     var name: String
     var photo: UIImage?
     var rating: Int = 0
+    var reason: String?
     
     // MARK: types
     struct PropertyKey {
         static let name = "name"
         static let photo = "photo"
         static let rating = "rating"
+        static let reason = "reason"
     }
     
-    init(name: String, photo: UIImage?, rating: Int) {
+    init(name: String, photo: UIImage?, rating: Int, reason: String?) {
         assert(!(name.isEmpty || rating < 0 || rating > 5))
         self.name = name
         self.photo = photo
         self.rating = rating
+        self.reason = reason
     }
 }

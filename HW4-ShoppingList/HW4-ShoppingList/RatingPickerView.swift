@@ -18,10 +18,15 @@ import UIKit
     */
     
     // MARK: properties
+    var isActive = false {
+        didSet {
+            updateButtonStates()
+        }
+    }
     private var ratingButtons = [UIButton]()
     var rating = 0 {
         didSet {
-            updateButtonSelectionStates()
+            updateButtonStates()
         }
     }
     @IBInspectable var starSize = CGSize(width: 30, height: 30) {
@@ -58,15 +63,13 @@ import UIKit
         let emptyStar = UIImage(named: "EmptyStar", in: bundle, compatibleWith: self.traitCollection)
         let highlightedStar = UIImage(named: "HighlightedStar", in: bundle, compatibleWith: self.traitCollection)
         
-        for index in 0..<starCount {
+        for _ in 0..<starCount {
             let button = UIButton()
             
             button.setImage(emptyStar, for: .normal)
             button.setImage(filledStar, for: .selected)
             button.setImage(highlightedStar, for: .highlighted)
             button.setImage(highlightedStar, for: [.highlighted, .selected])
-            
-            button.accessibilityLabel = "Set \(index + 1) star rating"
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
@@ -76,11 +79,26 @@ import UIKit
             
             ratingButtons.append(button)
         }
-        updateButtonSelectionStates()
+        updateButtonStates()
     }
-    private func updateButtonSelectionStates() {
+    private func updateButtonStates() {
+        let bundle = Bundle(for: type(of: self))
+        let filledStar = UIImage(named: "FilledStar", in: bundle, compatibleWith: self.traitCollection)
+        let emptyStar = UIImage(named: "EmptyStar", in: bundle, compatibleWith: self.traitCollection)
+        
         for (index, button) in ratingButtons.enumerated() {
-            button.isSelected = index < rating
+            if !isActive {
+                button.isEnabled = false
+                if index < rating {
+                    button.setImage(filledStar, for: .disabled)
+                } else {
+                    button.setImage(emptyStar, for: .disabled)
+                }
+            } else {
+                button.isEnabled = true
+                button.isSelected = index < rating
+                button.accessibilityLabel = "Set \(index + 1) star rating"
+            }
             
             let hintString: String?
             if rating == index + 1 {

@@ -56,7 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow you to add photos to your items</string>
+	<string>你可以通过相册为你的商品添加照片</string>
+	<key>NSCameraUsageDescription</key>
+	<string>你可以通过相机为你的商品添加照片</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
