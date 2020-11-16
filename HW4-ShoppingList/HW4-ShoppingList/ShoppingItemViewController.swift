@@ -160,6 +160,9 @@ class ShoppingItemViewController: UIViewController, UITextFieldDelegate, UIImage
                 return
             } else {
                 self.nameTextField.text = cls.first?.identifier
+                if self.nameTextField.text?.count ?? 0 > 0 {
+                    self.saveButton.isEnabled = true
+                }
             }
         }
     }
