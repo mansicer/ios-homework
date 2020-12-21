@@ -8,4 +8,4 @@ This repo is a submission of homworks of iOS development course 2020, Nanjing Un
 - 2020-11-02 03:42:53 HW3-Calculator has been submitted. 
 - 2020-11-16 01:04:34 HW4-ShoppingList has been submitted.
 - 2020-11-22 17:11:36 HW5-DLExample has been submitted.
-- 2020-12-03 16:49:23 HW6-SnackLocalization has been submitted
+- 2020-12-21 13:21:28 Update HW6-9 (not fully finished)
