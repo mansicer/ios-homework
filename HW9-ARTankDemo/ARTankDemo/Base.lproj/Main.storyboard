@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdt-MT-BmU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zuZ-bq-jw3">
+            <objects>
+                <viewController id="pdt-MT-BmU" customClass="ViewController" customModule="ARTankDemo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pv7-co-qKF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htl-y6-FYt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se9-UU-uyi">
+                                <rect key="frame" x="20" y="792" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="2tY-FS-mzI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="XoZ-LA-HFU"/>
+                                    <constraint firstAttribute="width" constant="70" id="pFI-YM-3lN"/>
+                                    <constraint firstAttribute="height" constant="70" id="rkt-FN-Ugc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="TankLeft" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchTankLeft:" destination="pdt-MT-BmU" eventType="touchUpInside" id="mis-Bm-VC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boG-X2-dIX">
+                                <rect key="frame" x="164" y="792" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="IMv-B1-pN6"/>
+                                    <constraint firstAttribute="height" constant="70" id="JEJ-1X-yyo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="TankRight" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchTankRight:" destination="pdt-MT-BmU" eventType="touchUpInside" id="T3t-za-eBG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-g6-Rrc">
+                                <rect key="frame" x="92" y="721" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="IGz-cL-dR7"/>
+                                    <constraint firstAttribute="height" constant="70" id="ezW-BV-FTE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="CannonFire" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchCannonFire:" destination="pdt-MT-BmU" eventType="touchUpInside" id="7cG-lw-DgH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEC-Oh-a7v">
+                                <rect key="frame" x="164" y="719" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Zsd-FB-s3W"/>
+                                    <constraint firstAttribute="width" constant="70" id="e2n-Go-pM5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="CannonRight" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchTurretRight:" destination="pdt-MT-BmU" eventType="touchUpInside" id="AgP-Rx-SCj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXY-6T-InR">
+                                <rect key="frame" x="20" y="722" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="FwB-Ee-VEy"/>
+                                    <constraint firstAttribute="width" constant="70" id="MEw-xf-xSh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="CannonLeft" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="torchTurretLeft:" destination="pdt-MT-BmU" eventType="touchUpInside" id="BT1-yv-Rnp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-sf-eUS">
+                                <rect key="frame" x="92" y="792" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="P9m-jd-Esw"/>
+                                    <constraint firstAttribute="width" constant="70" id="w2a-G0-4ja"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="TankForward" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchTankForward:" destination="pdt-MT-BmU" eventType="touchUpInside" id="fMd-gE-pWt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Iw-dR-b4A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="htl-y6-FYt" firstAttribute="top" secondItem="Pv7-co-qKF" secondAttribute="top" id="0cG-D4-GHu"/>
+                            <constraint firstItem="lLO-g6-Rrc" firstAttribute="leading" secondItem="vXY-6T-InR" secondAttribute="trailing" constant="2" id="0k8-Sm-vcs"/>
+                            <constraint firstItem="Xy9-sf-eUS" firstAttribute="top" secondItem="lLO-g6-Rrc" secondAttribute="bottom" constant="1" id="6UE-44-zDx"/>
+                            <constraint firstItem="NEC-Oh-a7v" firstAttribute="leading" secondItem="lLO-g6-Rrc" secondAttribute="trailing" constant="2" id="DEr-yh-5d7"/>
+                            <constraint firstItem="se9-UU-uyi" firstAttribute="top" secondItem="vXY-6T-InR" secondAttribute="bottom" id="HPQ-BD-meL"/>
+                            <constraint firstItem="Xy9-sf-eUS" firstAttribute="bottom" secondItem="6Iw-dR-b4A" secondAttribute="bottom" id="I4L-u2-2cy"/>
+                            <constraint firstItem="6Iw-dR-b4A" firstAttribute="bottom" secondItem="boG-X2-dIX" secondAttribute="bottom" id="ILG-1i-g6S"/>
+                            <constraint firstItem="boG-X2-dIX" firstAttribute="top" secondItem="NEC-Oh-a7v" secondAttribute="bottom" constant="3" id="Ix4-n9-z7o"/>
+                            <constraint firstItem="boG-X2-dIX" firstAttribute="leading" secondItem="Xy9-sf-eUS" secondAttribute="trailing" constant="2" id="Nke-ah-d3p"/>
+                            <constraint firstItem="vXY-6T-InR" firstAttribute="leading" secondItem="6Iw-dR-b4A" secondAttribute="leading" constant="20" id="SSP-se-ajk"/>
+                            <constraint firstItem="htl-y6-FYt" firstAttribute="trailing" secondItem="Pv7-co-qKF" secondAttribute="trailing" id="SdN-xg-TrO"/>
+                            <constraint firstItem="se9-UU-uyi" firstAttribute="leading" secondItem="6Iw-dR-b4A" secondAttribute="leading" constant="20" id="Uho-XU-5EQ"/>
+                            <constraint firstItem="Xy9-sf-eUS" firstAttribute="leading" secondItem="se9-UU-uyi" secondAttribute="trailing" constant="2" id="nRy-hS-5wd"/>
+                            <constraint firstItem="htl-y6-FYt" firstAttribute="leading" secondItem="Pv7-co-qKF" secondAttribute="leading" id="r6k-5K-7d0"/>
+                            <constraint firstItem="se9-UU-uyi" firstAttribute="bottom" secondItem="6Iw-dR-b4A" secondAttribute="bottom" id="uGd-6v-N6r"/>
+                            <constraint firstAttribute="bottom" secondItem="htl-y6-FYt" secondAttribute="bottom" id="yHw-yd-xw0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="htl-y6-FYt" id="2EH-yl-JrU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwq-Ta-Ixn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810.14492753623199" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CannonFire" width="128" height="128"/>
+        <image name="CannonLeft" width="128" height="128"/>
+        <image name="CannonRight" width="128" height="128"/>
+        <image name="TankForward" width="128" height="128"/>
+        <image name="TankLeft" width="128" height="128"/>
+        <image name="TankRight" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
