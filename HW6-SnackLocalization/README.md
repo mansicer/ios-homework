@@ -2,7 +2,9 @@
 
 ## 完成情况
 
-阅读并重新运行了给定的Notebook, 导出了对应的mlmodel文件.
+阅读并重新运行了给定的Notebook, 导出了对应的mlmodel文件. 相关的训练文件在`train`目录下
+
+根据mlmodel文件实现了一个简单的App, 对相机扫描出的图片进行类别预测和定位. 完成的App在`SnackLocalization`目录下.
 
 ## 作业要求
 - 独立阅读并运行给定的Jupyter Notebook，只需要运行，不需要修改任何代码

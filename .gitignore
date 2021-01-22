@@ -1,7 +1,7 @@
 dataset/
 .vscode/
-HW6-SnackLocalization/snacks/
-HW6-SnackLocalization/checkpoints/
+HW6-SnackLocalization/train/snacks/
+HW6-SnackLocalization/train/checkpoints/
 HW7-SequenceClassification/1. data-collection/data/
 HW7-SequenceClassification/2. model-creation/data/
 HW8-NLPAssignment/notebook/data/
@@ -287,3 +287,16 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift
+
+# Created by https://www.toptal.com/developers/gitignore/api/cocoapods
+# Edit at https://www.toptal.com/developers/gitignore?templates=cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
+
+# End of https://www.toptal.com/developers/gitignore/api/cocoapods

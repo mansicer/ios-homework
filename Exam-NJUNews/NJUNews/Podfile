@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'NJUNews' do
+  pod 'SwiftSoup', :path => '../'
+end
