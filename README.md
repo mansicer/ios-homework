@@ -10,3 +10,4 @@ This repo is a submission of homworks of iOS development course 2020, Nanjing Un
 - 2020-11-22 17:11:36 HW5-DLExample has been submitted.
 - 2020-12-21 13:21:28 Update HW6-9 (not fully finished)
 - 2021-01-22 15:34:38 HW6-SnackLocalization has been submitted (including App)
+- 2021-01-24 22:38:35 HW7-SequenceClassification has been submitted (including `GestureDemo` App)
