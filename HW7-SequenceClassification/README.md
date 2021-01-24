@@ -4,7 +4,7 @@
 
 完成了步骤1, 2, 使用步骤2导出的模型完成了一个使用CoreMotion进行动作预测的简单App `GestureDemo`, App界面如下图所示, UI部分使用了SwiftUI进行开发.
 
-<img src="/Users/sicer/Documents/Homework/ios-homework/HW7-SequenceClassification/assets/IMG_CA01345283B7-1.jpeg" alt="IMG_CA01345283B7-1" style="zoom:33%;" />
+<img src="assets/IMG_CA01345283B7-1.jpeg" alt="IMG_CA01345283B7-1" style="zoom:33%;" />
 
 ## Preview
 
