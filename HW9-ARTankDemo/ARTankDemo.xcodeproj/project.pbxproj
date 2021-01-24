@@ -12,7 +12,7 @@
 		084AAC262590438D0023BFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084AAC242590438D0023BFFA /* Main.storyboard */; };
 		084AAC282590438E0023BFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084AAC272590438E0023BFFA /* Assets.xcassets */; };
 		084AAC2B2590438E0023BFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084AAC292590438E0023BFFA /* LaunchScreen.storyboard */; };
-		084AAC34259043EA0023BFFA /* TinyToyTank.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 084AAC33259043EA0023BFFA /* TinyToyTank.rcproject */; };
+		08A4BB9B25BE01630099D7DC /* TinyToyTank.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 08A4BB9A25BE01630099D7DC /* TinyToyTank.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		084AAC272590438E0023BFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		084AAC2A2590438E0023BFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		084AAC2C2590438E0023BFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		084AAC33259043EA0023BFFA /* TinyToyTank.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TinyToyTank.rcproject; sourceTree = "<group>"; };
+		08A4BB9A25BE01630099D7DC /* TinyToyTank.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TinyToyTank.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				084AAC1E2590438D0023BFFA /* AppDelegate.swift */,
 				084AAC202590438D0023BFFA /* ViewController.swift */,
-				084AAC33259043EA0023BFFA /* TinyToyTank.rcproject */,
 				084AAC242590438D0023BFFA /* Main.storyboard */,
+				08A4BB9A25BE01630099D7DC /* TinyToyTank.rcproject */,
 				084AAC272590438E0023BFFA /* Assets.xcassets */,
 				084AAC292590438E0023BFFA /* LaunchScreen.storyboard */,
 				084AAC2C2590438E0023BFFA /* Info.plist */,
@@ -138,8 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				084AAC212590438D0023BFFA /* ViewController.swift in Sources */,
-				084AAC34259043EA0023BFFA /* TinyToyTank.rcproject in Sources */,
 				084AAC1F2590438D0023BFFA /* AppDelegate.swift in Sources */,
+				08A4BB9B25BE01630099D7DC /* TinyToyTank.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

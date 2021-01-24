@@ -121,6 +121,7 @@ class ReviewsManager {
   }
 
   private func findSentiment(_ review: Review, sentimentClassifier: NLModel?) {
+    print("\(review.language) \(sentimentClassifier?.configuration.language)")
     guard let sentimentClassifier = sentimentClassifier,
       review.language == sentimentClassifier.configuration.language else {
       return

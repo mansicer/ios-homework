@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08A4BB8925BDFCC10099D7DC /* SentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 08A4BB8825BDFCC10099D7DC /* SentimentClassifier.mlmodel */; };
+		08A9522425BDF63A00B33288 /* Es2EnCharEncoder.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 08A9522325BDF63A00B33288 /* Es2EnCharEncoder.mlmodel */; };
+		08A9522725BDF64800B33288 /* Es2EnCharDecoder.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 08A9522625BDF64800B33288 /* Es2EnCharDecoder.mlmodel */; };
 		0A5BEDC61F0AECB600AB37C5 /* NLPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BEDC51F0AECB600AB37C5 /* NLPHelper.swift */; };
 		0A5BEDCB1F0B27B900AB37C5 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BEDC91F0B261300AB37C5 /* Review.swift */; };
 		0A5BEDCC1F0B27BB00AB37C5 /* ReviewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5BEDC81F0B261300AB37C5 /* ReviewsManager.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A4BB8825BDFCC10099D7DC /* SentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifier.mlmodel; sourceTree = "<group>"; };
+		08A9522325BDF63A00B33288 /* Es2EnCharEncoder.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Es2EnCharEncoder.mlmodel; sourceTree = "<group>"; };
+		08A9522625BDF64800B33288 /* Es2EnCharDecoder.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Es2EnCharDecoder.mlmodel; sourceTree = "<group>"; };
 		0A5BEDC51F0AECB600AB37C5 /* NLPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPHelper.swift; sourceTree = "<group>"; };
 		0A5BEDC81F0B261300AB37C5 /* ReviewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsManager.swift; sourceTree = "<group>"; };
 		0A5BEDC91F0B261300AB37C5 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 				835B87D92215FAAE005AE9FA /* Util.swift */,
 				0A5EA8471F07E6D6006E6651 /* Main.storyboard */,
 				4C9B08C51F0C980D009C7DCD /* LaunchScreen.storyboard */,
+				08A4BB8825BDFCC10099D7DC /* SentimentClassifier.mlmodel */,
+				08A9522325BDF63A00B33288 /* Es2EnCharEncoder.mlmodel */,
+				08A9522625BDF64800B33288 /* Es2EnCharDecoder.mlmodel */,
 				0A5EA84A1F07E6D6006E6651 /* Assets.xcassets */,
 				0A5EA8551F07EE54006E6651 /* reviews.json */,
 				0A5EA84F1F07E6D6006E6651 /* Info.plist */,
@@ -165,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9B08951F0C8D22009C7DCD /* MovieListTableViewController.swift in Sources */,
+				08A9522725BDF64800B33288 /* Es2EnCharDecoder.mlmodel in Sources */,
 				0A5BEDCB1F0B27B900AB37C5 /* Review.swift in Sources */,
+				08A9522425BDF63A00B33288 /* Es2EnCharEncoder.mlmodel in Sources */,
 				4C82E2531F0C9D0300C76453 /* ActorListTableViewController.swift in Sources */,
 				0A5BEDCC1F0B27BB00AB37C5 /* ReviewsManager.swift in Sources */,
 				0A5EA85E1F083434006E6651 /* ReviewTableViewCell.swift in Sources */,
@@ -174,6 +185,7 @@
 				835B87DA2215FAAE005AE9FA /* Util.swift in Sources */,
 				83A2B3D521F859B100F1086A /* LanguageListTableViewController.swift in Sources */,
 				0A5BEDC61F0AECB600AB37C5 /* NLPHelper.swift in Sources */,
+				08A4BB8925BDFCC10099D7DC /* SentimentClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,10 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 98UH75S5K2;
 				INFOPLIST_FILE = SMDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.SMDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sicer.SMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -320,10 +332,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 98UH75S5K2;
 				INFOPLIST_FILE = SMDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.SMDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sicer.SMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
