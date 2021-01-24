@@ -1,5 +1,11 @@
 # 作业6: iOS 运动检测应用开发
 
+## 实现情况
+
+完成了步骤1, 2, 使用步骤2导出的模型完成了一个使用CoreMotion进行动作预测的简单App `GestureDemo`, App界面如下图所示, UI部分使用了SwiftUI进行开发.
+
+<img src="/Users/sicer/Documents/Homework/ios-homework/HW7-SequenceClassification/assets/IMG_CA01345283B7-1.jpeg" alt="IMG_CA01345283B7-1" style="zoom:33%;" />
+
 ## Preview
 
 在之前的作业中，我们主要关注应用的输入为图片的场景。本次作业我们通过完成一个运动检测应用开发的流程来学习对序列数据进行分析、分类，以及开发相关的iOS智能应用。
@@ -54,3 +60,4 @@
 这个模型是一个[LSTM]()，它的特点是会将神经元的输出作为下一次的输入，因此在进行预测时，会考虑历史的数据，因此非常适用于类似于文本、信号等序列数据。
 
 我们可以看到模型除了会输出预测的activaty以及概率，还会输出网络的hiddenOut和cellOut，这两部分可以作为网络的可选输入。因此你的App中，应该采集多个window的features，并将前一次预测的输出中的cellOut和hiddenOut连同下一个feature一起输入到模型中。从多次预测结果中选取概率最大的。
+
